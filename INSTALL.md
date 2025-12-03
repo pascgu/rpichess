@@ -141,20 +141,49 @@ cv2.imwrite("test.jpg", frame)
 print("Image capturée !")
 ```
 
-## Install Godot [TODO: upgrade to 4.5.x]
+## Installer ce qui est nécessaire pour utiliser le binaire Godot
 
-Godot avec Interface Graphique
+### Pour utiliser un binaire fourni par le PC de dev
 
-Si tu veux utiliser l’éditeur Godot avec une interface, installe la version ARM64 avec X11 :
+`chmod +x mon_jeu`
 
-wget https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_linux.arm64.zip
-unzip Godot_v4.0-stable_linux.arm64.zip
+./mon_jeu --fullscreen
 
-Lancer Godot :
+### coté PC de dev, installer Godot 4.5
 
-startx ./Godot_v4.0-stable_linux.arm64
+https://godotengine.org/download/windows/
 
-## Optimiser les perfs
+### coté PC de dev, générer le binaire
+
+Configurer l'Exportation pour Linux ARM64
+
+1. Ouvre le menu d'exportation :
+
+- Clique sur Projet > Exporter.
+- Ajoute une nouvelle présélection Linux/X11.
+
+2. Configure les options d'exportation :
+
+- Plateforme : Linux/X11.
+- Architecture : ARM64 (pour Raspberry Pi 4).
+- Type d'exportation : Binaire exécutable (par défaut).
+- Options avancées :
+
+  - Coche Exporter avec les données du projet (pour inclure les ressources).
+  - Coche Utiliser les shaders GLES3 (pour une meilleure compatibilité).
+
+3. Exporte le projet :
+
+- Clique sur Exporter le projet et choisis un dossier de destination.
+- Godot va générer un fichier exécutable (par exemple, mon_jeu).
+
+4. Transférer le Binaire sur le Raspberry Pi
+
+scp mon_jeu pi@192.168.1.24:/home/pi/
+
+(remplacer 192.168.1.24 par l'ip du raspberry Pi)
+
+## Optimiser les perfs [TODO: si besoin]
 
 Overclocking (Optionnel) :
 
