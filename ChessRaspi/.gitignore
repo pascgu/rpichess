@@ -5,3 +5,45 @@
 *.arm64
 *.pck
 ChessRaspi.sh
+
+# Build files
+bin/
+obj/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Editor files
+*.tre
+*.res
+*.import
+
+# Local configuration files
+*.local
+*.user
+*.swp
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
