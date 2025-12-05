@@ -4,4 +4,4 @@
 
 - [ ] changer mapping des touches zoom
 
-- [ ] 
+- [ ] Godot : créer un répertoire output/ et l'ajouter à .gitignore
